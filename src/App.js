@@ -24,10 +24,9 @@ class App extends Component {
   }
 
   handleClick = () => {
-    this.state.isClicked ? 
-      this.setState({isClicked : false}) : 
-        this.setState({isClicked : true})
-  }
+    console.log("its working")
+
+    }
 
   render() {
   return (

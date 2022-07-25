@@ -3,6 +3,8 @@ import "./beercard.css";
 
 function BeerCard(props) {
 
+const [liked, setLiked] = useState(null);
+
 
     return(
     <li>
@@ -16,9 +18,10 @@ function BeerCard(props) {
             {props.description}
         </p>
         <br></br>
-        <button onClick={() => {props.handleClick()}}>
-            Like</button>
-
+        
+        <button onClick={() => setLiked(!liked)}>
+            ❤ Like
+        </button>
     </li>
     )
     
