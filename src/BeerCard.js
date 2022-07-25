@@ -1,21 +1,8 @@
 import React,  { useState } from 'react';
 import "./beercard.css";
 
-
-
-
 function BeerCard(props) {
-const [likes, setLikes] = useState(0);
-const [isClicked, setIsClicked] = useState(false);
 
-const handleClick = () => {
-    if (isClicked) {
-      setLikes(likes - 1);
-    } else {
-      setLikes(likes + 1);
-    }
-    setIsClicked(!isClicked);
-};
 
     return(
     <li>
@@ -29,11 +16,12 @@ const handleClick = () => {
             {props.description}
         </p>
         <br></br>
-        <button className={ `like-button ${isClicked && 'liked'}` } onClick={ handleClick }>
-            <span className="likes-counter">{ `Like | ${likes}` }</span>
-        </button>
+        <button onClick={() => {props.handleClick()}}>
+            Like</button>
+
     </li>
     )
+    
 };
 
 export default BeerCard; 
