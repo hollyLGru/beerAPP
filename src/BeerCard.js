@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useState} from 'react';
 import "./beercard.css";
 
 function BeerCard(props) {
+// const [like, setLike] = useState(false);
 
+//     setLike = () => {
+//     console.log("its working")
     
+//     };
 
     return(
     <li>
@@ -18,13 +22,10 @@ function BeerCard(props) {
         </p>
         <br></br>
         
-        {/* <button 
-        onClick={props.handleClick}>
-            LIKE</button>
-        <p>
-            {this.state.isClicked ? "true" : "false"}
-        </p> */}
-{/* This is making my screen not work and I dont know why */}
+        {/* <button onClick={setLike} >
+            LIKE ME!
+        </button> */}
+
     </li>
     )
     
