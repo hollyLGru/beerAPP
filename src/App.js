@@ -11,6 +11,7 @@ class App extends Component {
 
     this.state = {
       arrayOfBeer: [],
+      isClicked : true
 
     }
   };
@@ -25,8 +26,10 @@ class App extends Component {
 
   handleClick = () => {
     console.log("its working")
-
-    }
+    this.state.isClicked ? 
+    this.setState({isClicked : false}) :
+     this.setState({isClicked : true})
+    };
 
   render() {
   return (
