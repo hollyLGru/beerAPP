@@ -24,12 +24,7 @@ class App extends Component {
   })
   }
 
-  handleClick = () => {
-    console.log("its working")
-    this.state.isClicked ? 
-    this.setState({isClicked : false}) :
-     this.setState({isClicked : true})
-    };
+
 
   render() {
   return (
@@ -38,6 +33,7 @@ class App extends Component {
       <ol>{this.state.arrayOfBeer.map((beer, index) => {
         return (
           <BeerCard key={index} name={beer.name} image_url={beer.image_url} first_brewed={beer.first_brewed} tagline={beer.tagline} abv={beer.abv} description={beer.description}  handleLike={this.handleClick}  />
+
         )
       })}</ol>
       </header>

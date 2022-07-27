@@ -2,12 +2,11 @@ import React, { useState} from 'react';
 import "./beercard.css";
 
 function BeerCard(props) {
-// const [like, setLike] = useState(false);
-
-//     setLike = () => {
-//     console.log("its working")
-    
-//     };
+const [like, setLike] = useState(false);
+const results = useState(false);
+// const like = results[0];
+// const setLike = results[1];
+console.log(results)
 
     return(
     <li>
@@ -21,10 +20,12 @@ function BeerCard(props) {
             {props.description}
         </p>
         <br></br>
-        
-        {/* <button onClick={setLike} >
-            LIKE ME!
-        </button> */}
+        <p>
+
+        </p>
+        <button onClick={() => setLike(!like)} >
+            {like ? 'UnLiked!' : 'LIKE ME!'}
+        </button>
 
     </li>
     )
