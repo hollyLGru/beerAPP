@@ -3,10 +3,9 @@ import "./beercard.css";
 
 function BeerCard(props) {
 const [like, setLike] = useState(false);
-const results = useState(false);
-// const like = results[0];
-// const setLike = results[1];
-console.log(results)
+        <button onClick={() => setLike(!like)} >
+            {like ? 'UnLiked!' : 'LIKE ME!'}
+        </button>
 
     return(
     <li>
@@ -24,7 +23,7 @@ console.log(results)
 
         </p>
         <button onClick={() => setLike(!like)} >
-            {like ? 'UnLiked!' : 'LIKE ME!'}
+            {like ? '❤' : 'Like!'}
         </button>
 
     </li>
